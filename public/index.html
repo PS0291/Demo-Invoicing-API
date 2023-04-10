@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+        <script src="https://www.paypal.com/sdk/js?client-id=Abwhqe71pcy3G7Nu2SXOV4hw06IoVQ6SlrchRwpvuzjaMqzfNR_3HQAm1MU7Hy9uSasmzCh9VrnRDbF3&disable-funding=credit&vault=true&intent=subscription&buyer-country=US">
+        </script><!-- Replace with your client ID -->
+        <title>Invoice with NodeJs Demo</title>
+    <style>
+
+       .menu-btn {
+        background-color: #93b2f575;
+        font-size: 16px;
+        font-weight: bolder;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .dropdown-menu {
+        position: relative;
+        display: inline-block;
+        }
+        .menu-content {
+        display: none;
+        position: absolute;
+        background-color: #0c9bee;
+        z-index: 1;
+        }
+        nav{
+        background-color: #0465c0;
+        }
+        .links,.links-hidden{
+        display: inline-block;
+        color: rgb(255, 255, 255);
+        padding: 12px 16px;
+        font-size: 16px;
+        font-weight: bold;
+        }
+        .links-hidden{
+        display: block;
+        }
+        .links{
+        display: inline-block;
+        }
+        .links-hidden:hover,.links:hover {
+        background-color: rgb(160, 248, 226);
+        }
+        .dropdown-menu:hover .menu-content {
+        display: block;
+        }
+        .dropdown-menu:hover .menu-btn {
+        background-color: #9cf1df;
+        }
+
+
+
+</style>
+</head>
+<body>
+    <div class="container">
+      <nav>
+        <a class="links" href="/">HOME</a>
+    
+        <div class="dropdown-menu">
+        <button class="menu-btn">Menu<</button>
+        <div class="menu-content">
+        <a class="links-hidden" href="/createinvoice">Create Invoice</a>
+        </div>
+        </div>
+        </nav>
+    </div>
+    <div class="container">
+    <div class="row header-bg-color mb-4 p-2">
+        <h2 class="text-center">Demo Invoicing</h2>
+        <h4 class="text-center">Using REST API</h4>
+      </div>
+    </div>
+  </body>
+  </html>

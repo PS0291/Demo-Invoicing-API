@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+        <script src="https://www.paypal.com/sdk/js?client-id=Abwhqe71pcy3G7Nu2SXOV4hw06IoVQ6SlrchRwpvuzjaMqzfNR_3HQAm1MU7Hy9uSasmzCh9VrnRDbF3&disable-funding=credit&vault=true&intent=subscription&buyer-country=US">
+        </script><!-- Replace with your client ID -->
+
+    <style>
+
+        table {
+            width: 750px;
+            border-collapse: collapse;
+            margin:50px auto;
+        }
+
+        /* Zebra striping */
+        tr:nth-of-type(odd) {
+            background: #eee;
+        }
+
+        th {
+            background: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+
+        td, th {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: left;
+            font-size: 18px;
+        }
+
+        /*
+        Max width before this PARTICULAR table gets nasty
+        This query will take effect for any screen smaller than 760px
+        and also iPads specifically.
+        */
+        @media
+        only screen and (max-width: 760px),
+        (min-device-width: 768px) and (max-device-width: 1024px)  {
+
+            table {
+                width: 100%;
+            }
+
+            /* Force table to not be like tables anymore */
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+
+            /* Hide table headers (but not display: none;, for accessibility) */
+            thead tr {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+
+            tr { border: 1px solid #ccc; }
+
+            td {
+                /* Behave  like a "row" */
+                border: none;
+                border-bottom: 1px solid #eee;
+                position: relative;
+                padding-left: 50%;
+            }
+
+            td:before {
+                /* Now like a table header */
+                position: absolute;
+                /* Top/left values mimic padding */
+                top: 6px;
+                left: 6px;
+                width: 45%;
+                padding-right: 10px;
+                white-space: nowrap;
+                /* Label the data */
+                content: attr(data-column);
+
+                color: #000;
+                font-weight: bold;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="row header-bg-color mb-5 p-3">
+        <h2 class="text-center">Invoicing Demo</h2>
+        <h4 class="text-center">Using REST API</h4>
+        <h5 class="text-center">Server-side Integration</h5> </div>
+
+        <p style="text-align:center;font-size:200%;color:blue;">Success !!!! Here is your Payment Link. Send it to your Buyer on your preffered channel</p>
+<table>
+    <thead>
+    <tr>
+        <th>Invoice Link</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td data-column="Invoice Link"><%= data.href %></td>
+        </tr>
+    </tbody>
+</table>
+<div>
+    <button onclick="load()">Go to Home Page</button>
+</div>
+<script>
+    function load() {
+        location.assign("/");
+    }
+    </script>
+
+</body>
+</html>
