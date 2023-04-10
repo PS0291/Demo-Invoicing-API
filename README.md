@@ -8,4 +8,4 @@ This folder contains example code for a standard PayPal integration using both t
 2. Add `CLIENT_ID` and `APP_SECRET` to the `.env` file
 3. Run `npm install`
 4. Run `npm start`
-5. Open http://localhost:8888
+5. Open http://localhost:9898
